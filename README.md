@@ -1,5 +1,5 @@
 # Verti 
-A modern website template from a defign by HTML5 UP Demo 
+A modern website template from a design by HTML5 UP Demo 
 
 ## Features
 * Modern look
