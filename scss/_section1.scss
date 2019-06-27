@@ -1,0 +1,36 @@
+.features {
+    img {
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .col-2 {
+        background-color: white;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        @media screen and (min-width: 960px){
+            margin-right: 22px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        div {
+            padding: 10px;
+
+            h3 {
+                padding-top: 10px;
+            }
+
+            span {
+                display: inline-block;
+                margin-bottom: 40px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
+
+    }
+}

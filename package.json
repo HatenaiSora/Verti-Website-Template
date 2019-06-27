@@ -1,0 +1,24 @@
+{
+  "name": "traverse",
+  "version": "1.0.0",
+  "description": "Present,past and future came into a bar. It was tense.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "siema": "echo \"Siema Alex, jedziemy z tym koksem!\""
+  },
+  "keywords": [
+    "tense",
+    "gulp",
+    "js"
+  ],
+  "author": "Alex",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-jshint": "^2.1.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "jshint": "^2.10.2"
+  }
+}

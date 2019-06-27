@@ -1,0 +1,94 @@
+body {
+    width: 100%;
+    background-color: $siteBackgroundColor;
+    color: $siteFontColor;
+    font-family: $siteFontFamily;
+}
+
+button {
+    padding: 14px;
+    font-size: 20px;
+    background-color: $siteBackgroundColor;
+    border: 1px solid $siteBackgroundColor;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    font-weight: 700;
+    margin: 5px 0;
+    width: 100%;
+
+    @media screen and (min-width:361px) {
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    i {
+        margin: 0 5px;
+    }
+
+    &.featured {
+        background-color: $siteButtonBorder;
+        color: white;
+        border: 1px solid $siteButtonBorder;
+    }
+}
+
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.section-padding {
+    padding: 10px;
+
+    @media screen and (min-width: 960px) {
+        padding: 10px 0 10px 0;
+    }
+}
+
+@mixin clearFix() {
+
+    &:after,
+    &:before {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+$maxWidth: 960px;
+$numberOfCols: 6;
+$singleCol: $maxWidth/$numberOfCols;
+
+.grid-container {
+    width: 100%;
+    max-width: $maxWidth;
+    margin: 0 auto;
+    padding: 5px 10px;
+
+    @media screen and (min-width: 960px) {
+        padding: 5px 0 5px 0;
+    }
+
+    .row {
+        @include clearFix();
+
+        @for $i from 1 through $numberOfCols {
+            .col-#{$i} {
+                width: $singleCol*$i - 15;
+                float: left;
+                min-height: 1px;
+            }
+
+            @media (max-width: 960px) {
+                [class*='col-'] {
+                    float: none;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
